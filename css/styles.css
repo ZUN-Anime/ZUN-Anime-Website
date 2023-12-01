@@ -1,0 +1,47 @@
+.bg-navbar-transparency {
+    background-color: rgba(33, 112, 128, 0.8) !important;
+  }
+
+.bg-body-gradient{
+    background: rgb(2,1,25);
+    background: linear-gradient(0deg, rgba(2,1,25,1) 0%, rgba(12,61,75,1) 50%, rgba(164,238,228,1) 100%);
+}
+
+.btn-mainpage{
+    position: relative;
+    overflow: hidden;
+    width: 25rem;
+    padding: 1.5em 0;
+    text-align: center;
+    margin: 2em 2em;
+    border-radius: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    border: 5px solid rgb(33, 110, 94);
+    background: rgb(53, 163, 141);
+}
+
+.btn-mainpage:hover{
+    background: rgb(33, 110, 94);
+}
+
+.btn-mainpage:active{
+    border: 5px solid rgb(15, 49, 42);
+    background: rgb(15, 49, 42);
+}
+
+.navbar-brand:hover{
+    scale: 105%;
+}
+
+.nav-item:hover{
+    scale: 105%;
+}
+
+.gallery {
+    display: flex;
+    height: 50rem;
+    justify-content: space-evenly; /* Center the thumbnails horizontally */
+    align-items: center; /* Align items at the top of the flex container */
+}
+
