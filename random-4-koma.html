@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+
+    
+    
+    <meta charset="utf-8">
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-body-gradient">
+  <!-- Navigation bar with logo -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-navbar-transparency fixed-top">
+      <div class="container-fluid">
+          <!-- Navbar brand/logo -->
+          <a class="navbar-brand text-white" href="index.html"><img src="images/Zun_anime_logo.PNG" alt="ZUN-Anime" style="width:60px;" class="rounded-pill"> Zürich Universities Anime</a>
+
+          <!-- Navbar toggler button for small screens -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon navbar-dark"></span>
+          </button>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="#">What is ZUN-Anime?</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="#">4-Koma</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Join Us!</a>
+                      <ul class="dropdown-menu dropdown-menu-end bg-dark">
+                          <li><a class="dropdown-item text-white" href="#">Join the Community on Discord!</a></li>
+                          <li><a class="dropdown-item text-white" href="#">Follow us on Instagram</a></li>
+                          <li><a class="dropdown-item text-white" href="#">Follow us on ... </a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    <main class="text-white">
+        <div class="px-4 pt-5 my-5 text-center border-bottom full-height">
+            <h1 id="randomNumber" class="display-4 fw-bold"></h1>
+            <div class="random-4-koma">
+                <img id="randomImage" style="object-fit: contain; height: 50vh;">
+            </div>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4"></p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <button type="button" class="btn btn-mainpage btn-lg px-4 gap-3 text-white">Archive</button>
+                <button type="button" class="btn btn-mainpage btn-lg px-4 text-white" > <a style="text-decoration: none; color: white;" href="random-4-koma.html">Random4-Koma</a> </button>
+              </div>  
+            </div>
+        </div>  
+    <div class="b-example-divider"></div>
+    </main>
+
+
+
+    <script>
+        // Generate a random number between 1 and 4
+        var random = Math.floor(Math.random() * 4) + 1;
+        var randomNumber = '#' + random;
+    
+        // Set the source of the image using the random number
+        var imageElement = document.getElementById('randomImage');
+        imageElement.src = 'images/4Koma/4-koma' + random + '.jpeg';
+    
+        // Display the random number with a '#' sign below the "Random 4-Koma" header
+        var numberElement = document.getElementById('randomNumber');
+        numberElement.textContent = 'Random 4-Koma: ' + randomNumber;
+    </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
