@@ -43,10 +43,27 @@
     align-items: center;
 }
 
-.gallery {
+.image-container {
     display: flex;
-    height: 50rem;
-    justify-content: space-evenly; /* Center the thumbnails horizontally */
-    align-items: center; /* Align items at the top of the flex container */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+  }
+  
+  .column {
+    flex: 33%;
+    max-width: 33%;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
 
