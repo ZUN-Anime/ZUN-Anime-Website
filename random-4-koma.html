@@ -48,7 +48,7 @@
 
     <main class="text-white">
         <div class="px-4 pt-5 my-5 text-center full-height">
-            <h1 id="randomNumber" class="display-4 fw-bold"></h1>
+            <h1 id="randomNumber" class=" pt-5 display-4 fw-bold"></h1>
             <div class="random-4-koma">
                 <div class="thumbnail-container">
                     <div class="thumbnail">
@@ -59,9 +59,13 @@
             <div class="col-lg-6 mx-auto">
               <p class="lead mb-4"></p>
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                <a style="text-decoration: none; color: white;" href="4-koma.html"></a><button type="button" class="btn btn-mainpage btn-lg px-4 gap-3 text-white">Archive</button></a>
+                <a class="btn btn-mainpage btn-lg px-4 gap-3 text-white align-middle" style="text-decoration: none; color: white; display: block;" href="4-koma.html">Archive</a>
                 <input id="clickMe" class="btn btn-mainpage btn-lg px-4 text-white" type="button" value="Random 4-Koma" onclick="doFunction();" />
               </div>  
+            </div>
+            <div class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="enlarged-image">
             </div>
         </div>  
     <div class="b-example-divider"></div>

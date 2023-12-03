@@ -1,3 +1,7 @@
+body {
+    min-height: 100vh;
+}
+
 .bg-navbar-transparency {
     background: linear-gradient(0deg, rgba(33, 112, 128, 0.2) 0%, rgba(33, 112, 128, 0.7) 50%, rgba(33, 112, 128, 0.8) 100%)
   }
