@@ -28,17 +28,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white fs-2" href="#">What is ZUN-Anime?</a>
+                        <a class="nav-link text-white fs-2" href="about-us.html">What is ZUN-Anime?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fs-2" href="#">4-Koma</a>
+                        <a class="nav-link text-white fs-2" href="4-koma.html">4-Koma</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white fs-2" href="#" role="button" data-bs-toggle="dropdown">Join Us!</a>
                         <ul class="dropdown-menu dropdown-menu-end bg-dark">
-                            <li><a class="dropdown-item text-white fs-2" href="#">Join the Community on Discord!</a></li>
-                            <li><a class="dropdown-item text-white fs-2" href="#">Follow us on Instagram</a></li>
-                            <li><a class="dropdown-item text-white fs-2" href="#">Follow us on ... </a></li>
+                              <li><a class="dropdown-item text-white fs-2" href="join-us.html">Follow us on Social Media</a></li>
+                              <li><a class="dropdown-item text-white fs-2" href="https://discord.gg/QHxAS48KPp">Join the Community on Discord!</a></li>
+                              <li><a class="dropdown-item text-white fs-2" href="https://www.instagram.com/zun.anime/">Visit us on Instagram</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -47,15 +47,19 @@
     </nav>
 
     <main class="text-white">
-        <div class="px-4 pt-5 my-5 text-center border-bottom full-height">
+        <div class="px-4 pt-5 my-5 text-center full-height">
             <h1 id="randomNumber" class="display-4 fw-bold"></h1>
             <div class="random-4-koma">
+                <div class="thumbnail-container">
+                    <div class="thumbnail">
                 <img id="randomImage" style="object-fit: contain; height: 50vh;">
+                    </div>
+                </div>
             </div>
             <div class="col-lg-6 mx-auto">
               <p class="lead mb-4"></p>
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                <button type="button" class="btn btn-mainpage btn-lg px-4 gap-3 text-white">Archive</button>
+                <a style="text-decoration: none; color: white;" href="4-koma.html"></a><button type="button" class="btn btn-mainpage btn-lg px-4 gap-3 text-white">Archive</button></a>
                 <input id="clickMe" class="btn btn-mainpage btn-lg px-4 text-white" type="button" value="Random 4-Koma" onclick="doFunction();" />
               </div>  
             </div>
@@ -69,7 +73,7 @@
         function rndNumber()
         {
             // Generate a random number between 1 and 4
-            var random = Math.floor(Math.random() * 4) + 1;
+            var random = Math.floor(Math.random() * 43) + 1;
             var randomNumber = '#' + random;
         
             // Set the source of the image using the random number
@@ -83,6 +87,31 @@
         rndNumber()
 
         document.getElementById("clickMe").onclick = rndNumber;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const modal = document.querySelector('.modal');
+            const modalImage = document.querySelector('#enlarged-image');
+            const closeModal = document.querySelector('.close');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    const imageSrc = thumbnail.querySelector('img').src;
+                    modalImage.src = imageSrc;
+                    modal.style.display = 'block';
+                });
+            });
+            
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
     </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
