@@ -33,6 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-white fs-2" href="#">4-Koma</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-2" href="sph.html">SPH</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white fs-2" href="#" role="button" data-bs-toggle="dropdown">Join Us!</a>
                         <ul class="dropdown-menu dropdown-menu-end bg-dark">
@@ -154,7 +157,6 @@
             else
                 startImage = start_image; //really ugly but too tired to change var_names
 
-            // Set the starting image according to the page
 
             function setImageSrc(element, src) {
 
@@ -287,6 +289,54 @@
             });
         });
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const modal = document.querySelector('.modal');
+            const modalImage = document.querySelector('#enlarged-image');
+            const closeModal = document.querySelector('.close');
+          
+            thumbnails.forEach(thumbnail => {
+              thumbnail.addEventListener('click', () => {
+                const imageSrc = thumbnail.querySelector('img').src;
+                modalImage.src = imageSrc;
+                modal.style.display = 'block';
+              });
+            });
+          
+            closeModal.addEventListener('click', () => {
+              resetZoom(); // Call the resetZoom function when closing the modal
+              modal.style.display = 'none';
+            });
+          
+            window.addEventListener('click', (event) => {
+              if (event.target === modal || event.target === modalImage) {
+                resetZoom(); // Call the resetZoom function when clicking outside the image
+                modal.style.display = 'none';
+              }
+            });
+          
+            modalImage.addEventListener('wheel', (event) => {
+              event.preventDefault();
+              const scaleDelta = 0.5;
+              const scaleFactor = event.deltaY > 0 ? 1 - scaleDelta : 1 + scaleDelta;
+              
+              // Calculate the cursor position relative to the modal image
+              const boundingRect = modalImage.getBoundingClientRect();
+              const cursorY = event.clientY - boundingRect.top;
+              
+              // Calculate the scale change based on the cursor position
+              const scaleChange = 1 + (scaleFactor - 1) * cursorY / modalImage.clientHeight;
+          
+              // Adjust the transformation origin based on the cursor position
+              modalImage.style.transformOrigin = `50% ${cursorY}px`;
+              
+              modalImage.style.transform = `scale(${scaleChange})`;
+            });
+          
+            function resetZoom() {
+              modalImage.style.transform = 'scale(1)'; // Reset the scale when closing or clicking outside the modal
+            }
+          });
 
     </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

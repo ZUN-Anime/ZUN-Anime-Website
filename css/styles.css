@@ -101,16 +101,25 @@ body {
 
 /* Style the modal */
 .modal {
+    overflow: hidden;
     display: none;
     position: fixed;
     z-index: 15;
-    padding-top: 10vh; /* Padding as a percentage of viewport height */
+    padding-top: 5vh; /* Padding as a percentage of viewport height */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.5);
 }
+#enlarged-image {
+    /* Set initial transition values for smooth zoom */
+    transition: transform 0.5s ease-in-out;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+  }
 
 .modal-content {
     object-fit: contain;
@@ -156,4 +165,42 @@ body {
 .widget  img:hover
 {
     transform: scale(1.1);
+}
+
+/* for the pop-up modal: */
+
+.custom-modal {
+    border-radius: 10%;
+    text-align: center;
+    align-items: center;
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1; /* Set a higher z-index for the modal to overlay on top of the content */
+    padding: 10px;
+    background: rgba(33, 112, 128, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.modal-image {
+    position: fixed;
+    bottom: 10px;
+    width: 7.5%; /* Adjust the width of the image as needed */
+    height: auto;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal-image:hover {
+    scale: 1.05;
+}
+
+.modal-image.show {
+    opacity: 1;
 }
