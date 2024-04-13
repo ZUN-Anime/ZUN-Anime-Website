@@ -7,40 +7,40 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body class="bg-body-gradient">
-    <nav class="navbar navbar-expand-lg navbar-light bg-navbar-transparency fixed-top">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
-            <a class="navbar-brand text-white fs-2 d-flex align-items-center" href="index.html"><img src="images/Zun_anime_logo.PNG" alt="ZUN-Anime" style="width:60px;" class="rounded-pill me-2"> Zürich Universities Anime</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-dark"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link text-white fs-2" href="about-us.html">What is ZUN-Anime?</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white fs-2" href="#">News</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-white fs-2" href="4-koma.html">4-Koma</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white fs-2" href="sph.html">SPH</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white fs-2" href="#" role="button" data-bs-toggle="dropdown">Join Us!</a>
-                    <ul class="dropdown-menu dropdown-menu-end bg-dark">
-                          <li><a class="dropdown-item text-white fs-2" href="join-us.html">Follow us on Social Media</a></li>
-                          <li><a class="dropdown-item text-white fs-2" href="https://discord.gg/QHxAS48KPp">Join the Community on Discord!</a></li>
-                          <li><a class="dropdown-item text-white fs-2" href="https://www.instagram.com/zun.anime/">Visit us on Instagram</a></li>
-                    </ul>
-                  </li>
-              </ul>
-            </div>
+  <nav class="navbar navbar-expand-xl navbar-light bg-navbar-transparency fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a class="navbar-brand text-white fs-2 d-flex align-items-center" href="index.html"><img src="images/Zun_anime_logo.PNG" alt="ZUN-Anime" style="width:60px;" class="rounded-pill me-2"> Zürich Universities Anime</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-dark"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link text-white fs-2" href="about-us.html">What is ZUN-Anime?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-2" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-white fs-2" href="4-koma.html">4-Koma</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-2" href="sph.html">SPH</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white fs-2" href="#" role="button" data-bs-toggle="dropdown">Join Us!</a>
+                <ul class="dropdown-menu dropdown-menu-end bg-dark">
+                      <li><a class="dropdown-item text-white fs-2" href="join-us.html">Follow us on Social Media</a></li>
+                      <li><a class="dropdown-item text-white fs-2" href="https://discord.gg/QHxAS48KPp">Join the Community on Discord!</a></li>
+                      <li><a class="dropdown-item text-white fs-2" href="https://www.instagram.com/zun.anime/">Visit us on Instagram</a></li>
+                </ul>
+              </li>
+          </ul>
         </div>
-      </nav>
+    </div>
+  </nav>
   <main class="text-white">
-    <div class="container full-height">
+    <div class="container container-text  full-height">
         <div class="px-4 py-5 my-5 text-center">
           <h1 class="display-4 fw-bold">Announcements</h1>
           <div class="col-lg-6 mx-auto">
@@ -56,35 +56,49 @@
                 etc
             </div>
           </div>
-          <!-- Right half for upcoming events -->
           <div class="col-lg-6">
-            <div class="card">
+            <div class="card text-white">
               <div class="card-header">
                 <h3 class="card-title">Upcoming Events</h3>
               </div>
               <div class="card-body">
                 <ul class="list-group">
-                <!-- Add your events content here -->
-                <li class="list-group-item">
-                  <div class="d-flex justify-content-between">
-                    <div class="event-entry">
+
+
+                <li class="list-group-item event-item">
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <div class="event-entry text-white">
                         <h2>Karaoke (temp)</h2>
-                        <p>Date: June 1, 2024 | 14.00-20.00</p>
+                        <p>Date: June 1, 2024 <br> 14.00-20.00</p>
                         <p>Location: Room xxx</p>
-                        <button class="btn btn-primary" onclick="handleEvent('https://example.com/rsvp-page', 'RSVP')">Link</button>
+                        <button class="btn btn-primary event-button" onclick="handleEvent('https://discord.com', 'Karaoke')">Discord-Link</button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="images/ZUN-Anime.jpg" alt="Karaoke Event Image" class="img-fluid rounded event-image">
                     </div>
                   </div>
                 </li>
-                <li class="list-group-item">
-                  <div class="d-flex justify-content-between">
-                    <div class="event-entry">
-                        <h2>Event Title</h2>
-                        <p>Date: January 1, 2025</p>
-                        <p>Location: Example Venue</p>
-                        <button class="btn btn-primary" onclick="handleEvent('https://example.com/rsvp-page', 'RSVP')">Link</button>
+
+
+                <li class="list-group-item event-item">
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <div class="event-entry text-white">
+                        <h2>Placeholder</h2>
+                        <p>Date: xxx <br> xx.xx-xx.xx</p>
+                        <p>Location: Room xxx</p>
+                        <button class="btn btn-primary event-button" onclick="handleEvent('https://discord.com', 'Karaoke')">Discord-Link</button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="images/Zun_anime_logo.PNG" alt="Placeholder" class="img-fluid rounded event-image">
                     </div>
                   </div>
                 </li>
+
+
                 </ul>
               </div>
             </div>
