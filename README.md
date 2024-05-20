@@ -1,5 +1,5 @@
 # ZUN-Anime
-ZUN-Anime Association Github repository
+ZUN-Anime Association Website Github repository
 ## Welcome to the GitHub Page of the ZUN-Anime Association
 
 ZUN-Anime stands for Zürich Universities Anime and is a student association from Switzerland.
