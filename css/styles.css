@@ -270,3 +270,30 @@ p{
     height: 10rem;
     position: absolute;
   }
+
+/* Partner logos in the footer (VSETH, VSUZH, ETH Student Project House): shown in their original colours,
+   which need a light background */
+.partner-badge {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+}
+.partner-badge a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
+.partner-badge a:focus-visible {
+    outline: 3px solid #19647E;
+    outline-offset: 3px;
+}
+.partner-divider {
+    width: 1px;
+    height: 2rem;
+    background: rgba(0, 0, 0, 0.15);
+}
