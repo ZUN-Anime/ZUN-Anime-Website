@@ -297,3 +297,9 @@ p{
     height: 2rem;
     background: rgba(0, 0, 0, 0.15);
 }
+
+/* The floating "student project under the SPH" box covers the bottom of the screen once you scroll;
+   leave room under the footer so the footer content (logos included) is not hidden behind it. */
+footer {
+    padding-bottom: 21rem;
+}
